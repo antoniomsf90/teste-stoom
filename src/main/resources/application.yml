@@ -1,0 +1,14 @@
+br:
+  com:
+    stoom:
+      ms:
+        adress:
+          google:
+            apikey: AIzaSyCj0cY2yEvVfYhAaTz3-P2MW-YRKmhz5Uw
+            url: https://maps.googleapis.com/maps/api/geocode/json?address={{adress}}&key={{apikey}}
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: db_adress

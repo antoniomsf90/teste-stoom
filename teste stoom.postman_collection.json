@@ -1,0 +1,396 @@
+{
+	"info": {
+		"_postman_id": "ee028249-582b-40cd-a233-c7dfb94dd4b0",
+		"name": "teste stoom",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "listar endereços",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/adress",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"adress"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listar endereço por id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/adress/604daa480be34d55489fb5d5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"adress",
+						"604daa480be34d55489fb5d5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "novo endereço",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"streetName\" : \"Rua Abilio Soares\",\n    \"number\" : 409,\n    \"complement\" : \"\",\n    \"neighbourhood\" : \"Paraíso\",\n    \"city\" : \"São Paulo\",\n    \"zipcode\": \"09634050\",\n    \"state\": {\n        \"id\": \"604daa050be34d55489fb5d4\",\n        \"name\": \"Sao Paulo\",\n        \"country\": {\n            \"id\": \"604da9b70be34d55489fb5d2\",\n            \"name\": \"Brazil\"\n        }\n    },\n    \n    \"longitude\": -46.5688778\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/adress",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"adress"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "atualizar endereço",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"id\": \"604acd17ab4d0602f2ef53cc\",\n        \"streetName\": \"Rua Abilio Soares\",\n        \"number\": \"409\",\n        \"complement\": \"\",\n        \"neighbourhood\": \"Paraíso\",\n        \"city\": \"São Paulo\",\n        \"state\": {\n            \"id\": \"604acd44ab4d0602f2ef53cd\",\n            \"name\": \"Rio de Janeiro\",\n            \"country\": {\n                \"id\": \"604aca2e0778584e407c02d2\",\n                \"name\": \"Brazil\"\n            }\n        },\n        \"zipcode\": \"09634050\",\n        \"latitude\": -23.5747823,\n        \"longitude\": -46.645344\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/adress",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"adress"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deletar endereço",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"id\": \"604abd937ddbd22c4847a72d\",\n        \"streetName\": \"Rua Abilio Soares\",\n        \"number\": \"409\",\n        \"complement\": \"\",\n        \"neighbourhood\": \"Paraíso\",\n        \"city\": \"São Paulo\",\n        \"state\": \"São Paulo\",\n        \"country\": \"Brasil\",\n        \"zipcode\": 0,\n        \"latitude\": -23.5747823,\n        \"longitude\": -46.645344\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/adress",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"adress"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listar paises",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/country",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"country"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listar pais por id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/country/604da9b70be34d55489fb5d2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"country",
+						"604da9b70be34d55489fb5d2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "novo pais",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Brasil\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/country",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"country"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "atualizar pais",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"604aca2e0778584e407c02d2\",\n    \"name\": \"Brasil\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/country",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"country"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deletar pais",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"604ac9fb0778584e407c02d1\",\n    \"name\": \"Brasil\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/country",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"country"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listar estados",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/state",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"state"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listar estado por id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/state/604da9fd0be34d55489fb5d3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"state",
+						"604da9fd0be34d55489fb5d3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "novo estado",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"name\": \"Rio de Janeiro\",\n        \"country\": {\n            \"id\": \"604da9b70be34d55489fb5d2\",\n            \"name\": \"Brazil\"\n        }\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/state",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"state"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "atualizar estado",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"604da9fd0be34d55489fb5d3\",\n    \"name\": \"Rio de Janeiro\",\n    \"country\": {\n        \"id\": \"604da9b70be34d55489fb5d2\",\n        \"name\": \"Brasil\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/state",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"state"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deletar estado",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"604acae57fa79a0fd6883c2f\",\n    \"name\": \"Sao Paulo\",\n    \"country\": {\n        \"id\": \"604aca2e0778584e407c02d2\",\n        \"name\": \"Brazil\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/state",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"state"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "google geocoding",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://maps.googleapis.com/maps/api/geocode/json?address=137, rua amapa, são bernardo do campo, são paulo, brasil&key=AIzaSyCj0cY2yEvVfYhAaTz3-P2MW-YRKmhz5Uw",
+					"protocol": "https",
+					"host": [
+						"maps",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"maps",
+						"api",
+						"geocode",
+						"json"
+					],
+					"query": [
+						{
+							"key": "address",
+							"value": "137, rua amapa, são bernardo do campo, são paulo, brasil"
+						},
+						{
+							"key": "key",
+							"value": "AIzaSyCj0cY2yEvVfYhAaTz3-P2MW-YRKmhz5Uw"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
